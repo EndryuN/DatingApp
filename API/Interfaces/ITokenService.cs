@@ -6,7 +6,7 @@ using API.Entities;
 
 namespace API.Interfaces
 {
-    public interface ITokenService
+    public interface ITokenService//token service created for authenticating users
     {
         string CreateToken(AppUser user);
     }
