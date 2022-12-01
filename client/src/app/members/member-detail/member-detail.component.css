@@ -13,3 +13,5 @@
     background-color: #4f4f4f;
     border-top: none;
 }
+
+.ngx-gallery { display: inline-block; margin-bottom: 20px; }
