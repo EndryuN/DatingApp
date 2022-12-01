@@ -8,15 +8,18 @@ import { MembersService } from 'src/app/_services/members.service';
   styleUrls: ['./member-list.component.css']
 })
 export class MemberListComponent implements OnInit {
-  members: Member[];
+  members: Member[] = [];
 
   constructor(private memberService: MembersService) { }
 
   ngOnInit(): void {
+    this.loadMembers();
   }
 
   loadMembers() {
-    this.memberService.getMembers().subscribe(members => {this.members = members;})
+    this.memberService.getMembers().subscribe({
+      next: members => this.members = members
+    })
 
   }
  
